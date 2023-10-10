@@ -36,8 +36,9 @@
             style="margin-top:10px; max-height:65vh;"
             class="wj-felx-grid"
         >
-            <wj-flex-grid-filter :filterColumns="['RowHeader','password',]" />
+            <wj-flex-grid-filter :filterColumns="['RowHeader','email','password',]" />
             <wj-flex-grid-cell-template cellType="RowHeader" v-slot="cell">{{cell.row.index + 1}}</wj-flex-grid-cell-template>
+            <wj-flex-grid-column binding="email" header="이메일" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="password" header="비밀번호" width="2*" :isReadOnly="true" align="center" />
         </wj-flex-grid>
         <v-col>

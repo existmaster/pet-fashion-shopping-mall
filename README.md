@@ -43,7 +43,7 @@ mvn spring-boot:run
 ```
 - membership-management
 ```
- http :8088/members email="email" password="password" 
+ http :8088/members email="email" password="password" id="id" 
 ```
 
 

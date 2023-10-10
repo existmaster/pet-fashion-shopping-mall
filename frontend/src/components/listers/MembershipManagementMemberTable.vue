@@ -68,6 +68,7 @@
                 [
                     { text: "email", value: "email" },
                     { text: "password", value: "password" },
+                    { text: "id", value: "id" },
                 ],
             member : [],
             newValue: {},

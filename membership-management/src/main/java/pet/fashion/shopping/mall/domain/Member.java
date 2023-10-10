@@ -14,10 +14,13 @@ import pet.fashion.shopping.mall.domain.MemberRegistered;
 //<<< DDD / Aggregate Root
 public class Member {
 
-    @Id
     private Email email;
 
     private String password;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     @PostPersist
     public void onPostPersist() {

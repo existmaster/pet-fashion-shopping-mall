@@ -111,6 +111,7 @@
             me.newValue = {
                 'allergy': '',
                 'sizeInfo': '',
+                'petId': 0,
             }
         },
         methods:{

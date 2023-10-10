@@ -20,6 +20,9 @@
                             <v-list-item-subtitle>
                                 SizeInfo :  {{item.sizeInfo }}
                             </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                PetId :  {{item.petId }}
+                            </v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-action>
@@ -70,9 +73,11 @@
                 var obj = {}
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
-                    obj['allergy'] = arr[4]; 
                     
                     
+                    
+                    
+                    obj['petId'] = arr[4]; 
                     
                     this.$emit('selected', obj);
                 }

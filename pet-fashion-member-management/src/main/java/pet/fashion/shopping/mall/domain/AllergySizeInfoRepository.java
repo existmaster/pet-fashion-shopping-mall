@@ -10,4 +10,4 @@ import pet.fashion.shopping.mall.domain.*;
     path = "allergySizeInfos"
 )
 public interface AllergySizeInfoRepository
-    extends PagingAndSortingRepository<AllergySizeInfo, String> {}
+    extends PagingAndSortingRepository<AllergySizeInfo, Long> {}

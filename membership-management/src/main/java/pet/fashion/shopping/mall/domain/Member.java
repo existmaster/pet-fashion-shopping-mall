@@ -17,7 +17,7 @@ public class Member {
     @Id
     private Email email;
 
-    private Password password;
+    private String password;
 
     @PostPersist
     public void onPostPersist() {

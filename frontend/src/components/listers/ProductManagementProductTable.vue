@@ -69,6 +69,7 @@
                     { text: "name", value: "name" },
                     { text: "photo", value: "photo" },
                     { text: "price", value: "price" },
+                    { text: "id", value: "id" },
                 ],
             product : [],
             newValue: {},

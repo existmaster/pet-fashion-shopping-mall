@@ -115,7 +115,7 @@ export default {
                 if(!this.newValue){
                     this.newValue = {
                         'email': {},
-                        'password': {},
+                        'password': '',
                     }
                 }
             }

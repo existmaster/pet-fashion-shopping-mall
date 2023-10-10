@@ -15,7 +15,6 @@ import pet.fashion.shopping.mall.domain.PetProfileDeleted;
 //<<< DDD / Aggregate Root
 public class PetProfile {
 
-    @Id
     private String name;
 
     private String species;
@@ -23,6 +22,10 @@ public class PetProfile {
     private Integer age;
 
     private Photo photo;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     @PostPersist
     public void onPostPersist() {

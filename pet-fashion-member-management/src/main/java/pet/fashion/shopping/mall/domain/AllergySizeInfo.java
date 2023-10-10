@@ -14,10 +14,13 @@ import pet.fashion.shopping.mall.domain.AllergySizeInfoAdded;
 //<<< DDD / Aggregate Root
 public class AllergySizeInfo {
 
-    @Id
     private String allergy;
 
     private String sizeInfo;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long petId;
 
     @PostPersist
     public void onPostPersist() {

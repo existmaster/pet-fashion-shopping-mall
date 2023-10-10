@@ -16,8 +16,9 @@
         </v-card-title >        
 
         <v-card-text>
-            <String v-if="editMode" label="알러지" v-model="value.allergy" :editMode="editMode" :inputUI="''"/>
+            <String label="알러지" v-model="value.allergy" :editMode="editMode" :inputUI="''"/>
             <String label="사이즈 정보" v-model="value.sizeInfo" :editMode="editMode" :inputUI="''"/>
+            <Number v-if="editMode" label="PetId" v-model="value.petId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>

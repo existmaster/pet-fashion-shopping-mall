@@ -26,7 +26,7 @@ public class PetProfileController {
         produces = "application/json;charset=UTF-8"
     )
     public PetProfile updatePetProfile(
-        @PathVariable(value = "id") String id,
+        @PathVariable(value = "id") Long id,
         HttpServletRequest request,
         HttpServletResponse response
     ) throws Exception {

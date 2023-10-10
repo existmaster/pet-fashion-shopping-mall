@@ -68,6 +68,7 @@
                 [
                     { text: "allergy", value: "allergy" },
                     { text: "sizeInfo", value: "sizeInfo" },
+                    { text: "petId", value: "petId" },
                 ],
             allergySizeInfo : [],
             newValue: {},
@@ -87,6 +88,7 @@
             this.newValue = {
                 'allergy': '',
                 'sizeInfo': '',
+                'petId': 0,
             }
         },
         methods: {

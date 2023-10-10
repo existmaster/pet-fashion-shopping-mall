@@ -36,8 +36,9 @@
             style="margin-top:10px; max-height:65vh;"
             class="wj-felx-grid"
         >
-            <wj-flex-grid-filter :filterColumns="['RowHeader','photo','price',]" />
+            <wj-flex-grid-filter :filterColumns="['RowHeader','name','photo','price',]" />
             <wj-flex-grid-cell-template cellType="RowHeader" v-slot="cell">{{cell.row.index + 1}}</wj-flex-grid-cell-template>
+            <wj-flex-grid-column binding="name" header="이름" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="photo" header="사진" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="price" header="가격" width="2*" :isReadOnly="true" align="center" />
         </wj-flex-grid>

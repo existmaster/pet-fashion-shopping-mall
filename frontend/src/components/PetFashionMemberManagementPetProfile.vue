@@ -16,7 +16,7 @@
         </v-card-title >        
 
         <v-card-text>
-            <String v-if="editMode" label="이름" v-model="value.name" :editMode="editMode" :inputUI="''"/>
+            <String label="이름" v-model="value.name" :editMode="editMode" :inputUI="''"/>
             <String label="종류" v-model="value.species" :editMode="editMode" :inputUI="''"/>
             <Number label="나이" v-model="value.age" :editMode="editMode" :inputUI="''"/>
             <Photo offline label="사진" v-model="value.photo" :editMode="editMode" @change="change"/>

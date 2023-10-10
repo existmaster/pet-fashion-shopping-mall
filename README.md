@@ -34,12 +34,12 @@ mvn spring-boot:run
 ## Test by API
 - pet-fashion-member-management
 ```
- http :8088/petProfiles name="name" species="species" age="age" photo="photo" 
- http :8088/allergySizeInfos allergy="allergy" sizeInfo="sizeInfo" 
+ http :8088/petProfiles name="name" species="species" age="age" photo="photo" id="id" 
+ http :8088/allergySizeInfos allergy="allergy" sizeInfo="sizeInfo" petId="petId" 
 ```
 - product-management
 ```
- http :8088/products name="name" photo="photo" price="price" 
+ http :8088/products name="name" photo="photo" price="price" id="id" 
 ```
 - membership-management
 ```

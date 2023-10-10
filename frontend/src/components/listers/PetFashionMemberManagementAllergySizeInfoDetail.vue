@@ -11,6 +11,9 @@
             <div>
                 <String label="SizeInfo" v-model="item.sizeInfo" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Number label="PetId" v-model="item.petId" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

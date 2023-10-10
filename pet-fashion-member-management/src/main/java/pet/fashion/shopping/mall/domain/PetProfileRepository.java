@@ -10,4 +10,4 @@ import pet.fashion.shopping.mall.domain.*;
     path = "petProfiles"
 )
 public interface PetProfileRepository
-    extends PagingAndSortingRepository<PetProfile, String> {}
+    extends PagingAndSortingRepository<PetProfile, Long> {}

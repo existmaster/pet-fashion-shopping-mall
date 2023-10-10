@@ -36,8 +36,9 @@
             style="margin-top:10px; max-height:65vh;"
             class="wj-felx-grid"
         >
-            <wj-flex-grid-filter :filterColumns="['RowHeader','sizeInfo',]" />
+            <wj-flex-grid-filter :filterColumns="['RowHeader','allergy','sizeInfo',]" />
             <wj-flex-grid-cell-template cellType="RowHeader" v-slot="cell">{{cell.row.index + 1}}</wj-flex-grid-cell-template>
+            <wj-flex-grid-column binding="allergy" header="알러지" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="sizeInfo" header="사이즈 정보" width="2*" :isReadOnly="true" align="center" />
         </wj-flex-grid>
         <v-col>
@@ -116,6 +117,7 @@ export default {
                     this.newValue = {
                         'allergy': '',
                         'sizeInfo': '',
+                        'petId': 0,
                     }
                 }
             }

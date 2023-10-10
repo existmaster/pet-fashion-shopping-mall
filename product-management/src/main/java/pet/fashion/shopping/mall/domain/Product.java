@@ -13,12 +13,15 @@ import pet.fashion.shopping.mall.ProductManagementApplication;
 //<<< DDD / Aggregate Root
 public class Product {
 
-    @Id
     private String name;
 
     private Photo photo;
 
     private Money price;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     @PrePersist
     public void onPrePersist() {}

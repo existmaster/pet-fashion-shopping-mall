@@ -70,6 +70,7 @@
                     { text: "species", value: "species" },
                     { text: "age", value: "age" },
                     { text: "photo", value: "photo" },
+                    { text: "id", value: "id" },
                 ],
             petProfile : [],
             newValue: {},

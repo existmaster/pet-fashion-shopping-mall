@@ -13,7 +13,12 @@ public class PetProfileHateoasProcessor
     @Override
     public EntityModel<PetProfile> process(EntityModel<PetProfile> model) {
         model.add(
-            Link.of(model.getRequiredLink("self").getHref() + "/").withRel("")
+            Link
+                .of(
+                    model.getRequiredLink("self").getHref() +
+                    "/updatepetprofile"
+                )
+                .withRel("updatepetprofile")
         );
 
         return model;

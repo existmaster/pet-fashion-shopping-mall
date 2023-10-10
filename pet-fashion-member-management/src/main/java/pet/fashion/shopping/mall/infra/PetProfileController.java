@@ -21,7 +21,7 @@ public class PetProfileController {
     PetProfileRepository petProfileRepository;
 
     @RequestMapping(
-        value = "petProfiles/{id}/",
+        value = "petProfiles/{id}/updatepetprofile",
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )

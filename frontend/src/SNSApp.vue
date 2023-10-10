@@ -45,17 +45,6 @@
                         애완동물 프로필
                     </v-list-item>
 
-                    <v-list-item
-                        class="px-2"
-                        key="allergySizeInfos"
-                        to="/petFashionMemberManagements/allergySizeInfos"
-                        @click="changeUrl()"
-                        color="primary"
-                        style="font-weight:700;"
-                    >
-                        알러지 사이즈 정보
-                    </v-list-item>
-
 
                     <v-list-item
                         class="px-2"
@@ -164,13 +153,6 @@ export default {
                 description: '', 
                 key: 'petProfiles', 
                 route: '/petFashionMemberManagements/petProfiles',
-                ImageUrl: '',
-            },
-            { 
-                title: '알러지 사이즈 정보', 
-                description: '', 
-                key: 'allergySizeInfos', 
-                route: '/petFashionMemberManagements/allergySizeInfos',
                 ImageUrl: '',
             },
             { 

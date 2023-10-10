@@ -9,12 +9,22 @@
                 <String label="Name" v-model="item.name" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="Species" v-model="item.species" :editMode="editMode" @change="change" />
+                <Number label="Weight" v-model="item.weight" :editMode="editMode" @change="change" />
             </div>
+            <div>
+                <Number label="NeckCircumference" v-model="item.neckCircumference" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="ChestCircumference" v-model="item.chestCircumference" :editMode="editMode" @change="change" />
+            </div>
+            <Breed offline label="Breed" v-model="item.breed" :editMode="false" :key="false" @change="change" />
             <div>
                 <Number label="Age" v-model="item.age" :editMode="editMode" @change="change" />
             </div>
-            <Photo offline label="Photo" v-model="item.photo" :editMode="false" @change="change" />
+            <Allergies offline label="Allergies" v-model="item.allergies" :editMode="false" :key="false" @change="change" />
+            <div>
+                <Number label="MemberId" v-model="item.memberId" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
 
         <v-card-actions>

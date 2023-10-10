@@ -124,7 +124,6 @@ export default {
             { id: 'petFashionMemberManagement', title: '애완동물 회원 관리 컨텍스트',
                 items: [
                     { key: 'petProfiles', url: '/petProfiles', name: '애완동물 프로필' },
-                    { key: 'allergySizeInfos', url: '/allergySizeInfos', name: '알러지 사이즈 정보' },
                 ]
             },
             { id: 'productManagement', title: '상품 관리 컨텍스트',
@@ -142,10 +141,6 @@ export default {
             {
                 text: "애완동물 프로필",
                 link: "/petProfiles",
-            },
-            {
-                text: "알러지 사이즈 정보",
-                link: "/allergySizeInfos",
             },
             {
                 text: "제품",

@@ -66,9 +66,9 @@
             values: [],
             headers: 
                 [
+                    { text: "id", value: "id" },
                     { text: "email", value: "email" },
                     { text: "password", value: "password" },
-                    { text: "id", value: "id" },
                 ],
             member : [],
             newValue: {},

@@ -66,11 +66,15 @@
             values: [],
             headers: 
                 [
-                    { text: "name", value: "name" },
-                    { text: "species", value: "species" },
-                    { text: "age", value: "age" },
-                    { text: "photo", value: "photo" },
                     { text: "id", value: "id" },
+                    { text: "name", value: "name" },
+                    { text: "weight", value: "weight" },
+                    { text: "neckCircumference", value: "neckCircumference" },
+                    { text: "chestCircumference", value: "chestCircumference" },
+                    { text: "breed", value: "breed" },
+                    { text: "age", value: "age" },
+                    { text: "allergies", value: "allergies" },
+                    { text: "memberId", value: "memberId" },
                 ],
             petProfile : [],
             newValue: {},
@@ -89,9 +93,13 @@
 
             this.newValue = {
                 'name': '',
-                'species': '',
+                'weight': 0,
+                'neckCircumference': 0,
+                'chestCircumference': 0,
+                'breed': '',
                 'age': 0,
-                'photo': '',
+                'allergies': '',
+                'memberId': 0,
             }
         },
         methods: {

@@ -39,12 +39,16 @@
             style="margin-top:10px; max-height:65vh;"
             class="wj-felx-grid"
         >
-            <wj-flex-grid-filter :filterColumns="['RowHeader','name','species','age','photo',]" />
+            <wj-flex-grid-filter :filterColumns="['RowHeader','name','weight','neckCircumference','chestCircumference','breed','age','allergies','memberId',]" />
             <wj-flex-grid-cell-template cellType="RowHeader" v-slot="cell">{{cell.row.index + 1}}</wj-flex-grid-cell-template>
             <wj-flex-grid-column binding="name" header="이름" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="species" header="종류" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="weight" header="무게" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="neckCircumference" header="목둘레" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="chestCircumference" header="가슴둘레" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="breed" header="품종" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="age" header="나이" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="photo" header="사진" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="allergies" header="알러지" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="memberId" header="MemberId" width="2*" :isReadOnly="true" align="center" />
         </wj-flex-grid>
         <v-col>
             <v-dialog
@@ -121,9 +125,13 @@ export default {
                 if(!this.newValue){
                     this.newValue = {
                         'name': '',
-                        'species': '',
+                        'weight': 0,
+                        'neckCircumference': 0,
+                        'chestCircumference': 0,
+                        'breed': {},
                         'age': 0,
-                        'photo': {},
+                        'allergies': {},
+                        'memberId': 0,
                     }
                 }
             }

@@ -110,9 +110,13 @@
             
             me.newValue = {
                 'name': '',
-                'species': '',
+                'weight': 0,
+                'neckCircumference': 0,
+                'chestCircumference': 0,
+                'breed': '',
                 'age': 0,
-                'photo': '',
+                'allergies': '',
+                'memberId': 0,
             }
         },
         methods:{

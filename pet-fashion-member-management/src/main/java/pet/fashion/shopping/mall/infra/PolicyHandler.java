@@ -20,27 +20,7 @@ public class PolicyHandler {
     @Autowired
     PetProfileRepository petProfileRepository;
 
-    @Autowired
-    AllergySizeInfoRepository allergySizeInfoRepository;
-
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='MemberRegistered'"
-    )
-    public void wheneverMemberRegistered_PetProfileManagementPolicy(
-        @Payload MemberRegistered memberRegistered
-    ) {
-        MemberRegistered event = memberRegistered;
-        System.out.println(
-            "\n\n##### listener PetProfileManagementPolicy : " +
-            memberRegistered +
-            "\n\n"
-        );
-        // Sample Logic //
-
-    }
 }
 //>>> Clean Arch / Inbound Adaptor

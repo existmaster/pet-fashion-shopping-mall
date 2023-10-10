@@ -7,8 +7,6 @@ Vue.use(Router);
 
 import PetFashionMemberManagementPetProfileManager from "./components/listers/PetFashionMemberManagementPetProfileCards"
 import PetFashionMemberManagementPetProfileDetail from "./components/listers/PetFashionMemberManagementPetProfileDetail"
-import PetFashionMemberManagementAllergySizeInfoManager from "./components/listers/PetFashionMemberManagementAllergySizeInfoCards"
-import PetFashionMemberManagementAllergySizeInfoDetail from "./components/listers/PetFashionMemberManagementAllergySizeInfoDetail"
 
 import ProductManagementProductManager from "./components/listers/ProductManagementProductCards"
 import ProductManagementProductDetail from "./components/listers/ProductManagementProductDetail"
@@ -30,16 +28,6 @@ export default new Router({
                 path: '/petFashionMemberManagements/petProfiles/:id',
                 name: 'PetFashionMemberManagementPetProfileDetail',
                 component: PetFashionMemberManagementPetProfileDetail
-            },
-            {
-                path: '/petFashionMemberManagements/allergySizeInfos',
-                name: 'PetFashionMemberManagementAllergySizeInfoManager',
-                component: PetFashionMemberManagementAllergySizeInfoManager
-            },
-            {
-                path: '/petFashionMemberManagements/allergySizeInfos/:id',
-                name: 'PetFashionMemberManagementAllergySizeInfoDetail',
-                component: PetFashionMemberManagementAllergySizeInfoDetail
             },
 
             {

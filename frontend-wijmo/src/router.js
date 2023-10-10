@@ -6,7 +6,6 @@ Vue.use(Router);
 
 
 import PetProfileManager from "./components/ui/PetProfileGrid"
-import AllergySizeInfoManager from "./components/ui/AllergySizeInfoGrid"
 
 import ProductManager from "./components/ui/ProductGrid"
 
@@ -21,11 +20,6 @@ export default new Router({
                 path: '/petProfiles',
                 name: 'PetProfileManager',
                 component: PetProfileManager
-            },
-            {
-                path: '/allergySizeInfos',
-                name: 'AllergySizeInfoManager',
-                component: AllergySizeInfoManager
             },
 
             {

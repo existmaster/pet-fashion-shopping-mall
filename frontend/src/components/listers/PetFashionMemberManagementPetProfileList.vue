@@ -45,14 +45,22 @@
                             
                             
                             
+                            
+                            
+                            
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
-                            [ Name :  {{data.name }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Species :  {{data.species }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Age :  {{data.age }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Photo :  {{data.photo }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Name :  {{data.name }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Weight :  {{data.weight }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ NeckCircumference :  {{data.neckCircumference }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ChestCircumference :  {{data.chestCircumference }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Breed :  {{data.breed }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Age :  {{data.age }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Allergies :  {{data.allergies }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MemberId :  {{data.memberId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -121,9 +129,13 @@
             
             this.newValue = {
                 'name': '',
-                'species': '',
+                'weight': 0,
+                'neckCircumference': 0,
+                'chestCircumference': 0,
+                'breed': '',
                 'age': 0,
-                'photo': '',
+                'allergies': '',
+                'memberId': 0,
             }
         },
         methods: {

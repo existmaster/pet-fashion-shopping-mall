@@ -15,17 +15,25 @@ import pet.fashion.shopping.mall.domain.PetProfileDeleted;
 //<<< DDD / Aggregate Root
 public class PetProfile {
 
-    private String name;
-
-    private String species;
-
-    private Integer age;
-
-    private Photo photo;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    private String name;
+
+    private Integer weight;
+
+    private Integer neckCircumference;
+
+    private Integer chestCircumference;
+
+    private Breed breed;
+
+    private Integer age;
+
+    private Allergies allergies;
+
+    private Long memberId;
 
     @PostPersist
     public void onPostPersist() {

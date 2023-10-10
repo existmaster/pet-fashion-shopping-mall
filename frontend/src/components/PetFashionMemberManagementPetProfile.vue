@@ -17,9 +17,13 @@
 
         <v-card-text>
             <String label="이름" v-model="value.name" :editMode="editMode" :inputUI="''"/>
-            <String label="종류" v-model="value.species" :editMode="editMode" :inputUI="''"/>
+            <Number label="무게" v-model="value.weight" :editMode="editMode" :inputUI="''"/>
+            <Number label="목둘레" v-model="value.neckCircumference" :editMode="editMode" :inputUI="''"/>
+            <Number label="가슴둘레" v-model="value.chestCircumference" :editMode="editMode" :inputUI="''"/>
+            <Breed offline label="품종" v-model="value.breed" :editMode="editMode" @change="change"/>
             <Number label="나이" v-model="value.age" :editMode="editMode" :inputUI="''"/>
-            <Photo offline label="사진" v-model="value.photo" :editMode="editMode" @change="change"/>
+            <Allergies offline label="알러지" v-model="value.allergies" :editMode="editMode" @change="change"/>
+            <Number label="MemberId" v-model="value.memberId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>
@@ -95,12 +99,10 @@
 <script>
     const axios = require('axios').default;
 
-    import Photo from './vo/Photo.vue';
 
     export default {
         name: 'PetFashionMemberManagementPetProfile',
         components:{
-            Photo,
         },
         props: {
             value: [Object, String, Number, Boolean, Array],

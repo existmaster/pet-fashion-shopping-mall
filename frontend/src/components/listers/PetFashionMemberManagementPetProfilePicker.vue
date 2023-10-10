@@ -18,13 +18,25 @@
                                 Name :  {{item.name }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Species :  {{item.species }}
+                                Weight :  {{item.weight }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                NeckCircumference :  {{item.neckCircumference }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                ChestCircumference :  {{item.chestCircumference }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                Breed :  {{item.breed }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Age :  {{item.age }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Photo :  {{item.photo }}
+                                Allergies :  {{item.allergies }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                MemberId :  {{item.memberId }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
@@ -76,15 +88,23 @@
                 var obj = {}
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     obj['id'] = arr[4]; 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     this.$emit('selected', obj);
                 }

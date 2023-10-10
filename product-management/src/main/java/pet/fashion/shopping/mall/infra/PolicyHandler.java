@@ -22,22 +22,5 @@ public class PolicyHandler {
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='PetProfileCreated'"
-    )
-    public void wheneverPetProfileCreated_RecommendedProductPolicy(
-        @Payload PetProfileCreated petProfileCreated
-    ) {
-        PetProfileCreated event = petProfileCreated;
-        System.out.println(
-            "\n\n##### listener RecommendedProductPolicy : " +
-            petProfileCreated +
-            "\n\n"
-        );
-        // Sample Logic //
-
-    }
 }
 //>>> Clean Arch / Inbound Adaptor

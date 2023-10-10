@@ -11,7 +11,11 @@ import pet.fashion.shopping.mall.infra.AbstractEvent;
 @ToString
 public class ProductDeleted extends AbstractEvent {
 
-    private String id;
+    private Long id;
+    private String name;
+    private Photo photo;
+    private Integer size;
+    private Money price;
 
     public ProductDeleted(Product aggregate) {
         super(aggregate);

@@ -12,6 +12,8 @@ import ProductManager from "./components/ui/ProductGrid"
 import MemberManager from "./components/ui/MemberGrid"
 
 
+import PetInformationView from "./components/PetInformationView"
+
 export default new Router({
     // mode: 'history',
     base: process.env.BASE_URL,
@@ -34,6 +36,13 @@ export default new Router({
                 component: MemberManager
             },
 
+
+
+            {
+                path: '/petInformations',
+                name: 'PetInformationView',
+                component: PetInformationView
+            },
 
 
     ]

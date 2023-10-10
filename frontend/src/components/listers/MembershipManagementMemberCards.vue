@@ -109,8 +109,8 @@
             me.values = temp.data._embedded.members;
             
             me.newValue = {
-                'email': '',
                 'password': '',
+                'email': '',
             }
         },
         methods:{

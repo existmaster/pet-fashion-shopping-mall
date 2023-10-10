@@ -60,7 +60,7 @@
 </template>
 
 <script>
-    import Money from '../vo/Money.vue';
+    import Money from '../Money.vue';
 
     export default {
         name: 'MoneyManager',

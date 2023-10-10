@@ -67,7 +67,7 @@
 </template>
 
 <script>
-    import Photo from '../vo/Photo.vue';
+    import Photo from '../Photo.vue';
 
     export default {
         name: 'PhotoManager',

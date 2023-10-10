@@ -18,9 +18,9 @@ public class Member {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Email email;
-
     private String password;
+
+    private String email;
 
     @PostPersist
     public void onPostPersist() {

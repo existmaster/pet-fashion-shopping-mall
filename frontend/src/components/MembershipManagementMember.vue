@@ -16,8 +16,8 @@
         </v-card-title >        
 
         <v-card-text>
-            <Email offline label="이메일" v-model="value.email" :editMode="editMode" @change="change"/>
             <String label="비밀번호" v-model="value.password" :editMode="editMode" :inputUI="''"/>
+            <String label="Email" v-model="value.email" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>
@@ -78,12 +78,10 @@
 <script>
     const axios = require('axios').default;
 
-    import Email from './vo/Email.vue';
 
     export default {
         name: 'MembershipManagementMember',
         components:{
-            Email,
         },
         props: {
             value: [Object, String, Number, Boolean, Array],

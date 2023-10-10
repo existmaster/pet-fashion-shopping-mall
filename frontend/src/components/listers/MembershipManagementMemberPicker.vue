@@ -15,10 +15,10 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                Email :  {{item.email }}
+                                Password :  {{item.password }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Password :  {{item.password }}
+                                Email :  {{item.email }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

@@ -5,9 +5,11 @@
         </v-card-title>
 
         <v-card-text>
-            <Email offline label="Email" v-model="item.email" :editMode="false" @change="change" />
             <div>
                 <String label="Password" v-model="item.password" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="Email" v-model="item.email" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

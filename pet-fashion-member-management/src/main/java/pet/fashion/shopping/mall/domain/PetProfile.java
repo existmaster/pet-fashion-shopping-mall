@@ -39,13 +39,16 @@ public class PetProfile {
     public void onPostPersist() {
         PetProfileCreated petProfileCreated = new PetProfileCreated(this);
         petProfileCreated.publishAfterCommit();
-
-        PetProfileDeleted petProfileDeleted = new PetProfileDeleted(this);
-        petProfileDeleted.publishAfterCommit();
     }
 
     @PrePersist
     public void onPrePersist() {}
+
+    @PreRemove
+    public void onPreRemove() {
+        PetProfileDeleted petProfileDeleted = new PetProfileDeleted(this);
+        petProfileDeleted.publishAfterCommit();
+    }
 
     public static PetProfileRepository repository() {
         PetProfileRepository petProfileRepository = PetFashionMemberManagementApplication.applicationContext.getBean(

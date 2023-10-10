@@ -65,3 +65,17 @@ services:
       - ./membership-management:/usr/src
       - ./maven-repo:/root/.m2
       
+  Marketing:
+    depends_on: 
+      - kafka
+    image: adoptopenjdk/maven-openjdk11:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    command: mvn spring-boot:run
+    ports:
+      - 8085:8085
+    working_dir: /usr/src
+    volumes:
+      - ./Marketing:/usr/src
+      - ./maven-repo:/root/.m2
+      

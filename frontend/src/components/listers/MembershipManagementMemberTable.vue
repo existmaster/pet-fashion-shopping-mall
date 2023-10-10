@@ -67,8 +67,8 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "email", value: "email" },
                     { text: "password", value: "password" },
+                    { text: "email", value: "email" },
                 ],
             member : [],
             newValue: {},
@@ -86,8 +86,8 @@
             this.values = temp.data._embedded.members;
 
             this.newValue = {
-                'email': '',
                 'password': '',
+                'email': '',
             }
         },
         methods: {

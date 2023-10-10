@@ -11,6 +11,16 @@ import pet.fashion.shopping.mall.infra.AbstractEvent;
 @ToString
 public class PetProfileDeleted extends AbstractEvent {
 
+    private Long id;
+    private String name;
+    private Integer weight;
+    private Integer neckCircumference;
+    private Integer chestCircumference;
+    private Breed breed;
+    private Integer age;
+    private Allergies allergies;
+    private Long memberId;
+
     public PetProfileDeleted(PetProfile aggregate) {
         super(aggregate);
     }

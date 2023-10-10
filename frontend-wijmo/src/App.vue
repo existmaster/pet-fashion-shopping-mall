@@ -136,6 +136,10 @@ export default {
                     { key: 'members', url: '/members', name: '회원' },
                 ]
             },
+            { id: 'marketing', title: 'Marketing',
+                items: [
+                ]
+            },
         ],
         cards: [
             {

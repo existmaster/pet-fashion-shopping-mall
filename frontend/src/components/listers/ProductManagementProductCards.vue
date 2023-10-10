@@ -111,7 +111,7 @@
             
             me.newValue = {
                 'name': '',
-                'photo': '',
+                'photo': {},
                 'size': 0,
                 'price': {},
             }

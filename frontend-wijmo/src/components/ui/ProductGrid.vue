@@ -48,7 +48,11 @@
             <wj-flex-grid-filter :filterColumns="['RowHeader','name','photo','size','price',]" />
             <wj-flex-grid-cell-template cellType="RowHeader" v-slot="cell">{{cell.row.index + 1}}</wj-flex-grid-cell-template>
             <wj-flex-grid-column binding="name" header="이름" width="2*" :isReadOnly="true" align="center" />
-            <wj-flex-grid-column binding="photo" header="Photo" width="2*" :isReadOnly="true" align="center" />
+            <wj-flex-grid-column binding="photo" header="Photo" width="2*" :isReadOnly="true" align="center">
+                <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
+                    <Photo v-model="cell.item.photo" :editMode="editMode"></Photo>
+                </wj-flex-grid-cell-template>
+            </wj-flex-grid-column>
             <wj-flex-grid-column binding="size" header="크기" width="2*" :isReadOnly="true" align="center" />
             <wj-flex-grid-column binding="price" header="Price" width="2*" :isReadOnly="true" align="center">
                 <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   

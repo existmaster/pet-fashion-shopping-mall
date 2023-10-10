@@ -32,6 +32,7 @@ jobs:
           mvn clean package -f ./pet-fashion-member-management/pom.xml
           mvn clean package -f ./product-management/pom.xml
           mvn clean package -f ./membership-management/pom.xml
+          mvn clean package -f ./Marketing/pom.xml
 
       - name: Docker Build and push for PetFashionMemberManagement
         uses: docker/build-push-action@v4
@@ -62,4 +63,14 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}/membership-management:latest
             ghcr.io/${{ github.repository }}/membership-management:${{ github.ref_name }}
+            
+      - name: Docker Build and push for Marketing
+        uses: docker/build-push-action@v4
+        with:
+          context: ./Marketing
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}/marketing:latest
+            ghcr.io/${{ github.repository }}/marketing:${{ github.ref_name }}
             

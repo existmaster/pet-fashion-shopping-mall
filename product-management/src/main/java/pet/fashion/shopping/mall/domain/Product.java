@@ -21,7 +21,7 @@ public class Product {
 
     private String name;
 
-    @OneToOne
+    @Embedded
     private Photo photo;
 
     private Integer size;

@@ -23,6 +23,7 @@ See the README.md files inside the each microservices directory:
 - pet-fashion-member-management
 - product-management
 - membership-management
+- Marketing
 
 
 ## Run API Gateway (Spring Gateway)
@@ -42,7 +43,10 @@ mvn spring-boot:run
 ```
 - membership-management
 ```
- http :8088/members id="id" email="email" password="password" 
+ http :8088/members id="id" password="password" email="email" 
+```
+- Marketing
+```
 ```
 
 

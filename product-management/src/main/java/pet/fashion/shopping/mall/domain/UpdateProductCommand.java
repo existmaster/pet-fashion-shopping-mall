@@ -7,9 +7,9 @@ import lombok.Data;
 @Data
 public class UpdateProductCommand {
 
-    private String id;
+    private Long id;
     private String name;
-    private File photo;
+    private Photo photo;
+    private Integer size;
     private Money price;
-    private Size size;
 }

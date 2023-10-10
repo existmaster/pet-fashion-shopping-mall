@@ -38,14 +38,14 @@
                     text
                     @click="save"
                 >
-                    상품 생성
+                    상품 삭제
                 </v-btn>
                 <v-btn
                     color="primary"
                     text
                     @click="save"
                 >
-                    상품 삭제
+                    CreateProduct
                 </v-btn>
                 <v-btn
                     color="primary"

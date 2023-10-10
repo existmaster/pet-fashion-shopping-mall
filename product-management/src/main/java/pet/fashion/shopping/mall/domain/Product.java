@@ -33,16 +33,16 @@ public class Product {
     public void onPostPersist() {
         ProductCreated productCreated = new ProductCreated(this);
         productCreated.publishAfterCommit();
-
-        ProductDeleted productDeleted = new ProductDeleted(this);
-        productDeleted.publishAfterCommit();
     }
 
     @PrePersist
     public void onPrePersist() {}
 
     @PreRemove
-    public void onPreRemove() {}
+    public void onPreRemove() {
+        ProductDeleted productDeleted = new ProductDeleted(this);
+        productDeleted.publishAfterCommit();
+    }
 
     public static ProductRepository repository() {
         ProductRepository productRepository = ProductManagementApplication.applicationContext.getBean(

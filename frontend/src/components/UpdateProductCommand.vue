@@ -5,11 +5,11 @@
         </v-card-title>
 
         <v-card-text>
-            <String label="Id" v-model="value.id" :editMode="editMode"/>
+            <Number label="Id" v-model="value.id" :editMode="editMode"/>
             <String label="Name" v-model="value.name" :editMode="editMode"/>
-            <File offline label="Photo" v-model="value.photo" :editMode="editMode" @change="change"/>
+            <Photo offline label="Photo" v-model="value.photo" :editMode="editMode" @change="change"/>
+            <Number label="Size" v-model="value.size" :editMode="editMode"/>
             <Money offline label="Price" v-model="value.price" :editMode="editMode" @change="change"/>
-            <Size offline label="Size" v-model="value.size" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
@@ -45,11 +45,11 @@
             value: {},
         }),
         created() {
-            this.value.id = '';
+            this.value.id = 0;
             this.value.name = '';
             this.value.photo = {};
+            this.value.size = 0;
             this.value.price = {};
-            this.value.size = {};
         },
         watch: {
         },

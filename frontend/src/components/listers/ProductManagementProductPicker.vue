@@ -21,10 +21,10 @@
                                 Photo :  {{item.photo }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Price :  {{item.price }}
+                                Size :  {{item.size }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Size :  {{item.size }}
+                                Price :  {{item.price }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

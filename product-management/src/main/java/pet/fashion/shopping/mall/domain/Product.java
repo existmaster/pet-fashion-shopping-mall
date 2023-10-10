@@ -21,11 +21,13 @@ public class Product {
 
     private String name;
 
-    private File photo;
+    @OneToOne
+    private Photo photo;
 
+    private Integer size;
+
+    @Embedded
     private Money price;
-
-    private Size size;
 
     @PostPersist
     public void onPostPersist() {

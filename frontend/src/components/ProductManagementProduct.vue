@@ -16,10 +16,10 @@
         </v-card-title >        
 
         <v-card-text>
-            <String label="이름" v-model="value.name" :editMode="editMode" :inputUI="'TEXT'"/>
-            <File offline label="사진" v-model="value.photo" :editMode="editMode" @change="change"/>
-            <Money offline label="가격" v-model="value.price" :editMode="editMode" @change="change"/>
-            <Size offline label="사이즈" v-model="value.size" :editMode="editMode" @change="change"/>
+            <String label="이름" v-model="value.name" :editMode="editMode" :inputUI="''"/>
+            <Photo offline label="Photo" v-model="value.photo" :editMode="editMode" @change="change"/>
+            <Number label="크기" v-model="value.size" :editMode="editMode" :inputUI="''"/>
+            <Money offline label="Price" v-model="value.price" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
@@ -101,11 +101,13 @@
 <script>
     const axios = require('axios').default;
 
+    import Photo from './vo/Photo.vue';
     import Money from './vo/Money.vue';
 
     export default {
         name: 'ProductManagementProduct',
         components:{
+            Photo,
             Money,
         },
         props: {

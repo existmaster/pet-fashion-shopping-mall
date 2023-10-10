@@ -8,9 +8,11 @@
             <div>
                 <String label="Name" v-model="item.name" :editMode="editMode" @change="change" />
             </div>
-            <File offline label="Photo" v-model="item.photo" :editMode="false" :key="false" @change="change" />
+            <Photo offline label="Photo" v-model="item.photo" :editMode="false" @change="change" />
+            <div>
+                <Number label="Size" v-model="item.size" :editMode="editMode" @change="change" />
+            </div>
             <Money offline label="Price" v-model="item.price" :editMode="false" @change="change" />
-            <Size offline label="Size" v-model="item.size" :editMode="false" :key="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>

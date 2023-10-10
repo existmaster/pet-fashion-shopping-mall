@@ -17,7 +17,7 @@ public class Product {
 
     private Photo photo;
 
-    private Money price;
+    private Double price;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

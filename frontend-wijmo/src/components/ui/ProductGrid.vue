@@ -118,7 +118,7 @@ export default {
                     this.newValue = {
                         'name': '',
                         'photo': {},
-                        'price': {},
+                        'price': 0,
                     }
                 }
             }

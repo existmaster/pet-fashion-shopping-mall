@@ -23,7 +23,6 @@
             headers: [
                 { text: "id", value: "id" },
                 { text: "memberId", value: "memberId" },
-                { text: "allergies", value: "allergies" },
                 { text: "neckCircumference", value: "neckCircumference" },
                 { text: "chestCircumference", value: "chestCircumference" },
             ],

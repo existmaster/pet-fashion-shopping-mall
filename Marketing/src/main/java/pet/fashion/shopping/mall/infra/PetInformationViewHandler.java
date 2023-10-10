@@ -31,9 +31,6 @@ public class PetInformationViewHandler {
             petInformation.setMemberId(
                 String.valueOf(petProfileCreated.getMemberId())
             );
-            petInformation.setAllergies(
-                String.valueOf(petProfileCreated.getAllergies())
-            );
             petInformation.setNeckCircumference(
                 petProfileCreated.getNeckCircumference()
             );
@@ -61,9 +58,6 @@ public class PetInformationViewHandler {
             if (petInformationOptional.isPresent()) {
                 PetInformation petInformation = petInformationOptional.get();
                 // view 객체에 이벤트의 eventDirectValue 를 set 함
-                petInformation.setAllergies(
-                    String.valueOf(petProfileUpdated.getAllergies())
-                );
                 petInformation.setNeckCircumference(
                     petProfileUpdated.getNeckCircumference()
                 );

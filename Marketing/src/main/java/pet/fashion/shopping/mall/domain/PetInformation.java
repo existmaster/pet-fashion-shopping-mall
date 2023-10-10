@@ -17,7 +17,6 @@ public class PetInformation {
     private Long id;
 
     private String memberId;
-    private String allergies;
     private Integer neckCircumference;
     private Integer chestCircumference;
 }

@@ -10,9 +10,6 @@
                 <String label="MemberId" v-model="item.memberId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="Allergies" v-model="item.allergies" :editMode="editMode" @change="change" />
-            </div>
-            <div>
                 <Number label="NeckCircumference" v-model="item.neckCircumference" :editMode="editMode" @change="change" />
             </div>
             <div>

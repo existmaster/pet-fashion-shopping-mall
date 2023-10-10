@@ -47,6 +47,7 @@ mvn spring-boot:run
 ```
 - Marketing
 ```
+ http :8088/marketings id="id" 
 ```
 
 

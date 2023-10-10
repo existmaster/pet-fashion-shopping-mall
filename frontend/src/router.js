@@ -14,6 +14,8 @@ import ProductManagementProductDetail from "./components/listers/ProductManageme
 import MembershipManagementMemberManager from "./components/listers/MembershipManagementMemberCards"
 import MembershipManagementMemberDetail from "./components/listers/MembershipManagementMemberDetail"
 
+import MarketingMarketingManager from "./components/listers/MarketingMarketingCards"
+import MarketingMarketingDetail from "./components/listers/MarketingMarketingDetail"
 
 
 export default new Router({
@@ -53,6 +55,16 @@ export default new Router({
                 component: MembershipManagementMemberDetail
             },
 
+            {
+                path: '/marketings/marketings',
+                name: 'MarketingMarketingManager',
+                component: MarketingMarketingManager
+            },
+            {
+                path: '/marketings/marketings/:id',
+                name: 'MarketingMarketingDetail',
+                component: MarketingMarketingDetail
+            },
 
 
 

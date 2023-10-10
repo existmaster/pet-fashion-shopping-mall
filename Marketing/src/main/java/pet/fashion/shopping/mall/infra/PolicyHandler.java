@@ -17,6 +17,9 @@ import pet.fashion.shopping.mall.domain.*;
 @Transactional
 public class PolicyHandler {
 
+    @Autowired
+    MarketingRepository marketingRepository;
+
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
 
@@ -31,8 +34,9 @@ public class PolicyHandler {
         System.out.println(
             "\n\n##### listener Notification : " + productCreated + "\n\n"
         );
-        // Sample Logic //
 
+        // Sample Logic //
+        Marketing.notification(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor

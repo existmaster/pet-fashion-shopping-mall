@@ -138,6 +138,7 @@ export default {
             },
             { id: 'marketing', title: 'Marketing',
                 items: [
+                    { key: 'marketings', url: '/marketings', name: 'Marketing' },
                 ]
             },
         ],
@@ -153,6 +154,10 @@ export default {
             {
                 text: "회원",
                 link: "/members",
+            },
+            {
+                text: "Marketing",
+                link: "/marketings",
             },
         ],
         activeMenu: null

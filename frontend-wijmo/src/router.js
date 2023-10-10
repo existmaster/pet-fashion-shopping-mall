@@ -11,6 +11,7 @@ import ProductManager from "./components/ui/ProductGrid"
 
 import MemberManager from "./components/ui/MemberGrid"
 
+import MarketingManager from "./components/ui/MarketingGrid"
 
 import PetInformationView from "./components/PetInformationView"
 
@@ -36,6 +37,11 @@ export default new Router({
                 component: MemberManager
             },
 
+            {
+                path: '/marketings',
+                name: 'MarketingManager',
+                component: MarketingManager
+            },
 
 
             {

@@ -70,6 +70,17 @@
                     </v-list-item>
 
 
+                    <v-list-item
+                        class="px-2"
+                        key="marketings"
+                        to="/marketings/marketings"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        Marketing
+                    </v-list-item>
+
 
                 </v-list>
             </v-navigation-drawer>
@@ -168,6 +179,13 @@ export default {
                 description: '', 
                 key: 'members', 
                 route: '/membershipManagements/members',
+                ImageUrl: '',
+            },
+            { 
+                title: 'Marketing', 
+                description: '', 
+                key: 'marketings', 
+                route: '/marketings/marketings',
                 ImageUrl: '',
             },
             

@@ -12,8 +12,9 @@
                         size="70"
                         class="border-color"
                     >
+                        <span class="material-symbols-outlined" style="font-size:60px; color:#9575CD;">product</span>
                     </v-list-item-avatar>
-                    <h1 class="align-self-center ml-3">제품</h1>
+                    <h1 class="align-self-center ml-3">상품</h1>
                     <div class="secondary-text-color" style="margin-left:30px;"></div>
                 </v-list-item>
             </v-row>
@@ -66,7 +67,7 @@
                                 color="primary"
                                 style="font-weight:500; font-size:20px; padding:15px; border:solid 2px; max-width:250px; overflow:hidden"
                             >
-                                제품 등록
+                                상품 등록
                             </v-btn>
                         </v-card-actions>
                     </v-card>
@@ -111,7 +112,8 @@
             me.newValue = {
                 'name': '',
                 'photo': '',
-                'price': 0,
+                'price': '',
+                'size': '',
             }
         },
         methods:{

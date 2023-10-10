@@ -12,6 +12,12 @@ public class ProductHateoasProcessor
 
     @Override
     public EntityModel<Product> process(EntityModel<Product> model) {
+        model.add(
+            Link
+                .of(model.getRequiredLink("self").getHref() + "/updateproduct")
+                .withRel("updateproduct")
+        );
+
         return model;
     }
 }

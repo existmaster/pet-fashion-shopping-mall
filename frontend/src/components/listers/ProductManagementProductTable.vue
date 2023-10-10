@@ -70,6 +70,7 @@
                     { text: "name", value: "name" },
                     { text: "photo", value: "photo" },
                     { text: "price", value: "price" },
+                    { text: "size", value: "size" },
                 ],
             product : [],
             newValue: {},
@@ -89,7 +90,8 @@
             this.newValue = {
                 'name': '',
                 'photo': '',
-                'price': 0,
+                'price': '',
+                'size': '',
             }
         },
         methods: {

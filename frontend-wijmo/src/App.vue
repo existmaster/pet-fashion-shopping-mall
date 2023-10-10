@@ -128,7 +128,7 @@ export default {
             },
             { id: 'productManagement', title: '상품 관리 컨텍스트',
                 items: [
-                    { key: 'products', url: '/products', name: '제품' },
+                    { key: 'products', url: '/products', name: '상품' },
                 ]
             },
             { id: 'membershipManagement', title: '회원 관리 컨텍스트',
@@ -143,7 +143,7 @@ export default {
                 link: "/petProfiles",
             },
             {
-                text: "제품",
+                text: "상품",
                 link: "/products",
             },
             {

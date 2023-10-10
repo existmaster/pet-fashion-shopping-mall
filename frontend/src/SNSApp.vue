@@ -54,7 +54,7 @@
                         color="primary"
                         style="font-weight:700;"
                     >
-                        제품
+                        상품
                     </v-list-item>
 
 
@@ -156,7 +156,7 @@ export default {
                 ImageUrl: '',
             },
             { 
-                title: '제품', 
+                title: '상품', 
                 description: '', 
                 key: 'products', 
                 route: '/productManagements/products',

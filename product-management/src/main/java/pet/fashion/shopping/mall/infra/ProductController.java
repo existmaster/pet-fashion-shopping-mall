@@ -19,5 +19,27 @@ public class ProductController {
 
     @Autowired
     ProductRepository productRepository;
+
+    @RequestMapping(
+        value = "products/{id}/updateproduct",
+        method = RequestMethod.PUT,
+        produces = "application/json;charset=UTF-8"
+    )
+    public Product updateProduct(
+        @PathVariable(value = "id") Long id,
+        @RequestBody UpdateProductCommand updateProductCommand,
+        HttpServletRequest request,
+        HttpServletResponse response
+    ) throws Exception {
+        System.out.println("##### /product/updateProduct  called #####");
+        Optional<Product> optionalProduct = productRepository.findById(id);
+
+        optionalProduct.orElseThrow(() -> new Exception("No Entity Found"));
+        Product product = optionalProduct.get();
+        product.updateProduct(updateProductCommand);
+
+        productRepository.save(product);
+        return product;
+    }
 }
 //>>> Clean Arch / Inbound Adaptor

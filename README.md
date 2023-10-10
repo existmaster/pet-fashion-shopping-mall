@@ -38,7 +38,7 @@ mvn spring-boot:run
 ```
 - product-management
 ```
- http :8088/products id="id" name="name" photo="photo" price="price" 
+ http :8088/products id="id" name="name" photo="photo" price="price" size="size" 
 ```
 - membership-management
 ```

@@ -9,16 +9,17 @@
         </template>
 
         <v-card-title v-if="value._links">
-            제품 # {{decode(value._links.self.href.split("/")[value._links.self.href.split("/").length - 1])}}
+            상품 # {{decode(value._links.self.href.split("/")[value._links.self.href.split("/").length - 1])}}
         </v-card-title >
         <v-card-title v-else>
-            제품
+            상품
         </v-card-title >        
 
         <v-card-text>
-            <String label="이름" v-model="value.name" :editMode="editMode" :inputUI="''"/>
-            <Photo offline label="사진" v-model="value.photo" :editMode="editMode" @change="change"/>
-            <Number label="가격" v-model="value.price" :editMode="editMode" :inputUI="''"/>
+            <String label="이름" v-model="value.name" :editMode="editMode" :inputUI="'TEXT'"/>
+            <File offline label="사진" v-model="value.photo" :editMode="editMode" @change="change"/>
+            <Money offline label="가격" v-model="value.price" :editMode="editMode" @change="change"/>
+            <Size offline label="사이즈" v-model="value.size" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
@@ -37,7 +38,14 @@
                     text
                     @click="save"
                 >
-                    ReadProduct
+                    상품 생성
+                </v-btn>
+                <v-btn
+                    color="primary"
+                    text
+                    @click="save"
+                >
+                    상품 삭제
                 </v-btn>
                 <v-btn
                     color="primary"
@@ -59,6 +67,20 @@
         </v-card-actions>
         <v-card-actions>
             <v-spacer></v-spacer>
+            <v-btn
+                v-if="!editMode"
+                color="primary"
+                text
+                @click="openUpdateProduct"
+            >
+                UpdateProduct
+            </v-btn>
+            <v-dialog v-model="updateProductDiagram" width="500">
+                <UpdateProductCommand
+                    @closeDialog="closeUpdateProduct"
+                    @updateProduct="updateProduct"
+                ></UpdateProductCommand>
+            </v-dialog>
         </v-card-actions>
 
         <v-snackbar
@@ -79,12 +101,12 @@
 <script>
     const axios = require('axios').default;
 
-    import Photo from './vo/Photo.vue';
+    import Money from './vo/Money.vue';
 
     export default {
         name: 'ProductManagementProduct',
         components:{
-            Photo,
+            Money,
         },
         props: {
             value: [Object, String, Number, Boolean, Array],
@@ -98,6 +120,7 @@
                 timeout: 5000,
                 text: '',
             },
+            updateProductDiagram: false,
         }),
 	async created() {
         },
@@ -194,6 +217,32 @@
             },
             change(){
                 this.$emit('input', this.value);
+            },
+            async updateProduct(params) {
+                try {
+                    if(!this.offline) {
+                        var temp = await axios.put(axios.fixUrl(this.value._links['updateproduct'].href), params)
+                        for(var k in temp.data) {
+                            this.value[k]=temp.data[k];
+                        }
+                    }
+
+                    this.editMode = false;
+                    this.closeUpdateProduct();
+                } catch(e) {
+                    this.snackbar.status = true
+                    if(e.response && e.response.data.message) {
+                        this.snackbar.text = e.response.data.message
+                    } else {
+                        this.snackbar.text = e
+                    }
+                }
+            },
+            openUpdateProduct() {
+                this.updateProductDiagram = true;
+            },
+            closeUpdateProduct() {
+                this.updateProductDiagram = false;
             },
         },
     }

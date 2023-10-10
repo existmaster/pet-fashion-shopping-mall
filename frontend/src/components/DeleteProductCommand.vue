@@ -1,25 +1,25 @@
 <template>
-
     <v-card outlined>
         <v-card-title>
-            ReadProduct
+            DeleteProduct
         </v-card-title>
 
         <v-card-text>
+            <String label="Id" v-model="value.id" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
-                    color="deep-purple lighten-2"
+                    color="primary"
                     text
-                    @click="readProduct"
+                    @click="deleteProduct"
             >
-                ReadProduct
+                DeleteProduct
             </v-btn>
             
             <v-btn
-                    color="deep-purple lighten-2"
+                    color="primary"
                     text
                     @click="close"
             >
@@ -33,7 +33,7 @@
 <script>
    
     export default {
-        name: 'ReadProductCommand',
+        name: 'DeleteProductCommand',
         components:{},
         props: {},
         data: () => ({
@@ -41,12 +41,13 @@
             value: {},
         }),
         created() {
+            this.value.id = '';
         },
         watch: {
         },
         methods: {
-            readProduct() {
-                this.$emit('readProduct', this.value);
+            deleteProduct() {
+                this.$emit('deleteProduct', this.value);
             },
             close() {
                 this.$emit('closeDialog');

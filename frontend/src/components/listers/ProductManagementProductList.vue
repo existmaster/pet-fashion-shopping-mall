@@ -1,6 +1,6 @@
 <template>
     <div>
-    <h1>제품</h1>
+    <h1>상품</h1>
         <v-row>
             <v-card
                 class="mx-auto"
@@ -26,7 +26,7 @@
                         color="primary"
                         style="font-weight:500; font-size:20px; padding:15px; border:solid 2px; max-width:250px; overflow:hidden"
                     >
-                        제품 등록
+                        상품 등록
                     </v-btn>
                 </v-card-actions>
             </v-card>
@@ -44,6 +44,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -51,6 +52,7 @@
                             [ Name :  {{data.name }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Photo :  {{data.photo }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Price :  {{data.price }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Size :  {{data.size }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -120,7 +122,8 @@
             this.newValue = {
                 'name': '',
                 'photo': '',
-                'price': 0,
+                'price': '',
+                'size': '',
             }
         },
         methods: {

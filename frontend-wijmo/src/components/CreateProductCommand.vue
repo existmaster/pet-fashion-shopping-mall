@@ -1,24 +1,29 @@
 <template>
+
     <v-card outlined>
         <v-card-title>
-            ReadProduct
+            CreateProduct
         </v-card-title>
 
         <v-card-text>
+            <String label="Name" v-model="value.name" :editMode="editMode"/>
+            <File offline label="Photo" v-model="value.photo" :editMode="editMode" @change="change"/>
+            <Money offline label="Price" v-model="value.price" :editMode="editMode" @change="change"/>
+            <Size offline label="Size" v-model="value.size" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
-                    color="primary"
+                    color="deep-purple lighten-2"
                     text
-                    @click="readProduct"
+                    @click="createProduct"
             >
-                ReadProduct
+                CreateProduct
             </v-btn>
             
             <v-btn
-                    color="primary"
+                    color="deep-purple lighten-2"
                     text
                     @click="close"
             >
@@ -32,7 +37,7 @@
 <script>
    
     export default {
-        name: 'ReadProductCommand',
+        name: 'CreateProductCommand',
         components:{},
         props: {},
         data: () => ({
@@ -40,12 +45,16 @@
             value: {},
         }),
         created() {
+            this.value.name = '';
+            this.value.photo = {};
+            this.value.price = {};
+            this.value.size = {};
         },
         watch: {
         },
         methods: {
-            readProduct() {
-                this.$emit('readProduct', this.value);
+            createProduct() {
+                this.$emit('createProduct', this.value);
             },
             close() {
                 this.$emit('closeDialog');

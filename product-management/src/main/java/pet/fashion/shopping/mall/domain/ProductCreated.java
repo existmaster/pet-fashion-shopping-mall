@@ -11,11 +11,11 @@ import pet.fashion.shopping.mall.infra.AbstractEvent;
 @ToString
 public class ProductCreated extends AbstractEvent {
 
-    private String id;
+    private Long id;
     private String name;
-    private File photo;
+    private Photo photo;
+    private Integer size;
     private Money price;
-    private Size size;
 
     public ProductCreated(Product aggregate) {
         super(aggregate);

@@ -13,8 +13,8 @@ public class PetProfileUpdated extends AbstractEvent {
     private Integer weight;
     private Integer neckCircumference;
     private Integer chestCircumference;
-    private Breed breed;
+    private String breed;
     private Integer age;
-    private Allergies allergies;
+    private String allergies;
     private Long memberId;
 }
